@@ -9,12 +9,26 @@ function userClicked() {
     scenicBeauty.style.top = y + 'px';
 }
 
+
+
+    var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+
+
+
+
+
 function buttonClicked(){
 			console.log("Button Clicked");
 			var c = 0;
 			var t;
 			var timer_is_on = 0;
-	
+
 	     if (!timer_is_on) {
 				timer_is_on = 1;
 				timedCount();
@@ -24,7 +38,5 @@ function buttonClicked(){
 			c = c + 1;
 			t = setTimeout(timedCount, 1000);
 			}
-		
+
 }
-
-
