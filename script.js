@@ -9,34 +9,36 @@ function userClicked() {
     scenicBeauty.style.top = y + 'px';
 }
 
+//displayTime(10);
 
-
-    var timeleft = 10;
+function displayTime(timeleft){
     var downloadTimer = setInterval(function(){
     timeleft--;
     document.getElementById("countdowntimer").textContent = timeleft;
-    if(timeleft <= 0)
+
+    if(timeleft <= 0){
+        console.log("timeleft= 0");
+        hideImage();
+        showButton();
+
         clearInterval(downloadTimer);
+
+      }
     },1000);
 
+}
 
+function hideImage(){
 
-
-
+      document.getElementById("scenicBeauty").style.display ='none';
+}
+function showButton(){
+  if(document.getElementById('startClock').style.display === "none")
+    document.getElementById('startClock').style.display='block';
+}
 function buttonClicked(){
-			console.log("Button Clicked");
-			var c = 0;
-			var t;
-			var timer_is_on = 0;
-
-	     if (!timer_is_on) {
-				timer_is_on = 1;
-				timedCount();
-		 }
-			function timedCount() {
-			document.getElementById("demo").value = c;
-			c = c + 1;
-			t = setTimeout(timedCount, 1000);
-			}
+    document.getElementById('startClock').style.display='none';
+    displayTime(4);
+ //document.getElementById("startClock").innerHTML = "Button Clicked";
 
 }
