@@ -1,13 +1,13 @@
 <html>
 	<head>
-		<h1>Welcome to Homepage</h1>
+	<!-- //	<h1>Welcome to Homepage</h1> -->
 	</head>
 	<script src="script.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<body>
 	<p id="demo"></p>
 		<div class="demo">
-		Display Time: <p> The download will begin in <span id="countdowntimer">10 </span> Seconds</p>
+		Display Time:  <span id="countdowntimer"></span> Seconds
 		</div>
 		<div class "button">
 			<button id= "startClock" type="button"  onclick="buttonClicked()">Click Me!</button>
@@ -15,7 +15,9 @@
 		<br></br>
 		<div class "container">
 			<div class "picture">
-				<img alt="Not Found" id="scenicBeauty"  src="scenic-beauty.jpg" width="460" onclick="userlicked()" height="345"/>
+				<input type="file" onchange="previewFile()"><br>
+				<img src="" height="200" alt="Image preview..." id="scenicBeauty" width="460" height="345" onclick="userClicked()"/>
+				<!-- <img alt="Not Found" id="scenicBeauty"  src="scenic-beauty.jpg" width="460" onclick="userClicked()" height="345"/> -->
 			</div>
 		</div>
 	</body>
