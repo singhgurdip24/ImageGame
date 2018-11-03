@@ -44,12 +44,14 @@ function previewFile(){
 
        if (file) {
            reader.readAsDataURL(file); //reads the data as a URL
+           showButton();
        } else {
            preview.src = "";
        }
   }
-
+  hideButton();
   previewFile();
+
 
 function hideImage(){
       document.getElementById("scenicBeauty").style.display ='none';
@@ -61,6 +63,9 @@ function showImage(){
 function showButton(){
   if(document.getElementById('startClock').style.display === "none")
     document.getElementById('startClock').style.display='block';
+}
+function hideButton(){
+    document.getElementById('startClock').style.display='none';
 }
 
 function buttonClicked(){
